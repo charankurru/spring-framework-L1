@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:annotation-config/>
+    <context:property-placeholder location="classpath:jdbc-config.properties"/>
+
+    <!-- bean definitions here -->
+
+<!--Beans of ideatester-->
+        <!--    <bean id="sim" class="com.ideatester.Jio">-->
+        <!--        <constructor-arg name="Ceo" value="Mukesh_Ambani"/>-->
+        <!--        <constructor-arg name="NetworkId" value="1"/>-->
+        <!--    </bean>-->
+
+        <!--    <bean id="sim2" class="com.ideatester.Airtel">-->
+        <!--        <property name="Ceo" value="Neel_kamal"/>-->
+        <!--        <property  name="NetworkId" value="2"/>-->
+        <!--    </bean>-->
+
+
+
+<!--Beans for Objective_injection-->
+        <!--    <bean id="objref" class = "com.Objedtive_Injection.CostlyResource"/>-->
+
+        <!--    <bean id="uA" class="com.Objedtive_Injection.UserA">-->
+        <!--        <property name="Cr" ref="objref"/>-->
+        <!--    </bean>-->
+
+
+<!--Beans for Loose_Coupling-->
+            <!--    <bean id="rr" class="com.Loose_Coupling.RichResourseA">-->
+            <!--    </bean>-->
+
+            <!--    <bean id="luA" class="com.Loose_Coupling.UserA">-->
+            <!--        <property name="costly_resource" ref="rr"/>-->
+            <!--    </bean>-->
+
+
+
+<!--Beans of Auto Wired-->
+                <bean id="org" class="com.AutoWired.Heart">
+                    <property name="type" value="human"/>
+                    <property name="num" value="1"/>
+                </bean>
+                <bean id="org2" class="com.AutoWired.Legs">
+                    <property name="type" value="humam"/>
+                    <property name="num" value="2"/>
+                </bean>
+
+                <bean id="hum1" class="com.AutoWired.Humans"/>
+
+
+<!--Beans For  JDBC Example-->
+            <!--    <bean id="jdbc" class="com.JDBC.JdbcConnection"/>-->
+
+<!--Bean for Bean Annotations-->
+<!--    <bean id="coll" class="com.BeanAnnotations.College"/>-->
+
+
+</beans>
